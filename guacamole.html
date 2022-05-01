@@ -4,16 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><strong>Whac a Mole</strong></title>
-    <h1><p><strong>Whac a Mole</strong></p></h1>
-    <input id="">
-    <input id="">
-    <input id="">
-    <input id="">
-    <input id="">
-    <input id="">
+    <title><strong>Whack a Mole</strong></title>
+    <h1><p><strong>Whack a Mole</strong></p></h1>
+    <div><input type="hole_0" name="" class="hole"></div>
+    <div><input type="hole_1" name="" class="hole"></div>
+    <div><input type="hole_2" name="" class="hole"></div>
+    <div><input type="hole_3" name="" class="hole"></div>
+    <div><input type="hole_4" name="" class="hole"></div>
+    <div><input type="hole_5" name="" class="hole"></div>
 </head>
 <body>
-    
+  <script>
+ 
+var  aleatorio =() =>{ return  Math.round(Math.random()*5 )}
+
+ var div = document.getElementsByClassName('hole');
+ 
+div[aleatorio()].style.backgroundColor="yellow"
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+
+
+  </script>  
 </body>
 </html>
