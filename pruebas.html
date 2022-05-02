@@ -9,77 +9,44 @@
   <h1>
     <p><strong>Whack a Mole</strong></p>
   </h1>
-  <div><input type="hole_0" name="" class="hole"></div>
-  <div><input type="hole_1" name="" class="hole"></div>
-  <div><input type="hole_2" name="" class="hole"></div>
-  <div><input type="hole_3" name="" class="hole"></div>
-  <div><input type="hole_4" name="" class="hole"></div>
-  <div><input type="hole_5" name="" class="hole"></div>
+  <div><input  name="" class="hole"></div>
+  <div><input  name="" class="hole"></div>
+  <div><input  name="" class="hole"></div>
+  <div><input  name="" class="hole"></div>
+  <div><input  name="" class="hole"></div>
+  <div><input  name="" class="hole"></div>
+  <button id="start">START</button>
 </head>
 
 <body>
-  <script>
+  <script type="text/javascript">
 
 
 
+function random (){
 
+
+var aleatorio = () => { return Math.round(Math.random() * div.length)}
+
+var div = document.getElementsByClassName('hole');
+var hole =div[aleatorio()].style.backgroundColor = "brown"
+
+
+};
+
+
+
+var start = document.getElementById("start")
+
+start.addEventListener("mousedown",function(){
+
+var añadir = setInterval(() => random(), 1000);
+  
+  });
+ 
     
-    //var aleatorio = () => { return Math.round(Math.random() * 5) }
-    
-    //var div = document.getElementsByClassName('hole');
-    //div[aleatorio()].style.backgroundColor = "brown";
-
-
-   
-
-    setInterval(myTimer,1000);
-    function myTimer(){
-    var aleatorio =  Math.round(Math.random() * div.length) 
-    var div = document.getElementsByClassName('hole');
-    div[aleatorio].style.backgroundColor = "blue"
-        
-
-
-
-
-    };
-        
-      
-
-    //div[aleatorio()].style.backgroundColor = "brown";
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </script>
+  
+</script>
 </body>
 
 </html>
