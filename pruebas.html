@@ -18,21 +18,60 @@
 </head>
 
 <body>
-  <script type="text/javascript">
+  <script>
 
 
 
-    function intervalo() {
 
-      var aleatorio = () => { return Math.round(Math.random() * div.length)}
-
-      var div = document.getElementsByClassName('hole');
-      div[aleatorio()].style.backgroundColor = "brown"
-    }
-
-    var añadir = setInterval(() => intervalo(), 1000);
-    var parar = setInterval(() => clearInterval(añadir), 5000);
     
+    //var aleatorio = () => { return Math.round(Math.random() * 5) }
+    
+    //var div = document.getElementsByClassName('hole');
+    //div[aleatorio()].style.backgroundColor = "brown";
+
+
+   
+
+    setInterval(myTimer,1000);
+    function myTimer(){
+    var aleatorio =  Math.round(Math.random() * div.length) 
+    var div = document.getElementsByClassName('hole');
+    div[aleatorio].style.backgroundColor = "blue"
+        
+
+
+
+
+    };
+        
+      
+
+    //div[aleatorio()].style.backgroundColor = "brown";
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
