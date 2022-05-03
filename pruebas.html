@@ -24,13 +24,13 @@
 
 
 function random (){
-    var aleatorio = () => { return Math.round(Math.random() * holes.length)}
+    var aleatorio = () => { return Math.floor(Math.random() * holes.length)}
     var holes = document.getElementsByClassName('hole')
     var hole = holes[aleatorio()]
     hole.style.backgroundColor = 'yellow'
     setTimeout(() => {
-        hole.style.backgroundColor = 'white' //O el color que quieras
-    }, 999) //Aquí pon el tiempo que quieres que quede amarillo
+        hole.style.backgroundColor = 'white' 
+    }, 999) 
 };
 
 

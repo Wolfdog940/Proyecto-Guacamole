@@ -24,16 +24,14 @@
 
 
 function random (){
-var aleatorio = () => { return Math.round(Math.random() * holes.length)}
-var holes = document.getElementsByClassName('hole');
-var hole =hole[aleatorio()]
-hole.style.backgroundColor = 'brown'
-setTimeout(() => {hole.style.backgroundColor = 'white'
-}, 999)
+    var aleatorio = () => { return Math.floor(Math.random() * holes.length)}
+    var holes = document.getElementsByClassName('hole')
+    var hole = holes[aleatorio()]
+    hole.style.backgroundColor = 'yellow'
+    setTimeout(() => {
+        hole.style.backgroundColor = 'white' 
+    }, 999) 
 };
-
-
-
 
 
 var start = document.getElementById("start")
@@ -41,12 +39,14 @@ var start = document.getElementById("start")
 start.addEventListener("mousedown",function(){
 
 var añadir = setInterval(() => random(), 1000);
-//clearInterval(añadir,6000);
+
+var borrar =setInterval(()=>clearInterval(añadir),30000)
 
 
-  });
+
+});
  
-  
+    
   
 </script>
 </body>
