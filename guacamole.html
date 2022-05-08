@@ -15,10 +15,14 @@
   <div><input  name="" class="hole"></div>
   <div><input  name="" class="hole"></div>
   <div><input  name="" class="hole"></div>
-  <button id="start">START</button>
+  <a href="inicio.html"><button>RESET</button></a>
 </head>
 
 <body>
+<p>SCORE</p>
+<p id="puntos">0</p>
+
+  
   <script type="text/javascript">
 
 
@@ -31,12 +35,35 @@ function random (){
     setTimeout(() => {
         hole.style.backgroundColor = 'white' 
     }, 999) 
-};
 
 
-var start = document.getElementById("start")
 
-start.addEventListener("mousedown",function(){
+}
+const holes = document.getElementsByClassName('hole')
+
+for (var i =0;i<holes.length;i+=1){
+var arrayElement =holes[i]
+
+arrayElement.addEventListener("mousedown",function(){
+
+var puntos =document.getElementById('puntos')
+if (this.style.backgroundColor=='yellow'){       // en este caso elenteno que cliko
+
+
+puntos.textContent= parseInt(puntos.textContent)+1
+
+
+
+
+}
+
+})}
+
+
+
+
+
+
 
 var añadir = setInterval(() => random(), 1000);
 
@@ -44,9 +71,8 @@ var borrar =setInterval(()=>clearInterval(añadir),30000)
 
 
 
-});
- 
-    
+//anti cheat y boton de reset 
+
   
 </script>
 </body>
