@@ -28,7 +28,7 @@
             var holes = document.getElementsByClassName('hole')
             var hole = holes[aleatorio()]
             hole.style.backgroundColor = 'yellow'
-            setTimeout(() => { hole.style.backgroundColor = 'white' }, 499)
+            setTimeout(() => { hole.style.backgroundColor = 'white' }, 999)
         }
 
 
@@ -42,7 +42,6 @@
                 if (this.style.backgroundColor == 'yellow') {
                  score.textContent= parseInt(score.textContent)+1
                  }
-                
 
             })
        
@@ -50,19 +49,18 @@
         
         for (var i = 0; i < holes.length; i += 1) {
             var arrayElement = holes[i]
-            arrayElement.addEventListener('dblclick', function () {
+            arrayElement.addEventListener('dblclick', function (event) {
                 var score = document.getElementById('score')
-                if (this.style.backgroundColor == 'yellow') {
-                    score.textContent =parseInt(score.textContent)-1
-                    
-                }
+                if (this.style.backgroundColor == 'yellow'){event.preventDefault();
+                alert("solo puedes darle al topo una vez")}
+                
                 
 
             })
        
         }
        
-        var añadir = setInterval(() => random(), 500)
+        var añadir = setInterval(() => random(), 1000)
         var borrar = setInterval(() => clearInterval(añadir), 20000)
        
     </script>
