@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" , initial-scale=1.0">
   <title><strong>Whack a Mole</strong></title>
   <h1>
     <p><strong>Whack a Mole</strong></p>
@@ -23,28 +23,13 @@
 
 
 
-function random (){
-    var aleatorio = () => { return Math.floor(Math.random() * holes.length)}
-    var holes = document.getElementsByClassName('hole')
-    var hole = holes[aleatorio()]
-    hole.style.backgroundColor = 'yellow'
-    setTimeout(() => {
-        hole.style.backgroundColor = 'white' 
-    }, 999) 
-};
-
-
-var start = document.getElementById("start")
-
-start.addEventListener("mousedown",function(){
-
-var añadir = setInterval(() => random(), 1000);
-
-var borrar =setInterval(()=>clearInterval(añadir),30000)
 
 
 
-});
+var holes=document.getElementsByClassName('hole')
+var aleatorio =()=>{return Math.floor(Math.random()* holes.length)}
+console.log(aleatorio())
+
  
     
   
@@ -52,3 +37,6 @@ var borrar =setInterval(()=>clearInterval(añadir),30000)
 </body>
 
 </html>
+
+var aleatorio = () => { return Math.floor(Math.random() * holes.length)}
+    var holes = document.getElementsByClassName('hole')

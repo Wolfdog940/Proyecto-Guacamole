@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div><input class="hole"></div>
+    <div><input class="hole"></div>
+    <div><input class="hole"></div>
+    <div><input class="hole"></div>
+    <div><input class="hole"></div>
+    <div><input class="hole"></div>
+    <p>SCORE</p>
+    <p id="score">0</p>
+
+
+
+    <script type="text/javascript">
+
+
+        function random() {
+            var aleatorio = () => { return Math.floor(Math.random() * holes.length) }
+            var holes = document.getElementsByClassName('hole')
+            var hole = holes[aleatorio()]
+            hole.style.backgroundColor = 'yellow'
+            setTimeout(() => { hole.style.backgroundColor = 'white' }, 499)
+        }
+
+
+
+        
+        const holes = document.getElementsByClassName('hole')
+        for (var i = 0; i < holes.length; i += 1) {
+            var arrayElement = holes[i]
+            arrayElement.addEventListener('mousedown', function () {
+                var score = document.getElementById('score')
+                if (this.style.backgroundColor == 'yellow') {
+                 score.textContent= parseInt(score.textContent)+1
+                 }
+                
+
+            })
+       
+        }
+        
+        for (var i = 0; i < holes.length; i += 1) {
+            var arrayElement = holes[i]
+            arrayElement.addEventListener('dblclick', function () {
+                var score = document.getElementById('score')
+                if (this.style.backgroundColor == 'yellow') {
+                    score.textContent =parseInt(score.textContent)-1
+                    
+                }
+                
+
+            })
+       
+        }
+       
+        var añadir = setInterval(() => random(), 500)
+        var borrar = setInterval(() => clearInterval(añadir), 20000)
+       
+    </script>
+
+
+</body>
+
+</html>
